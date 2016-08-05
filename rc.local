@@ -1,0 +1,10 @@
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+/omega-scripts/turn-off-led.sh
+# Activate the swap file on an external USB drive
+SWAP_FILE="/mnt/sda1/swap.page"
+if [ -e "$SWAP_FILE" ]; then
+	swapon /mnt/sda1/swap.page
+fi
+free
+exit 0
